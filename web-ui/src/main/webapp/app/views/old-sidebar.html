@@ -1,0 +1,64 @@
+<ul class="nav nav-list" ng-controller="sidebarController">
+    <li class="open">
+        <a href="#">
+            <i class="menu-icon fa fa-user"></i>
+            <span translate class="menu-text">User.Management</span>
+            <b class="arrow fa fa-angle-down"></b>
+            <!-- arrow down icon if there's a submenu -->
+        </a>
+
+        <b class="arrow"></b>
+        <!-- optional arrow for minimized menu & hover submenu -->
+
+        <ul class="submenu">
+            <li>
+                <a href="/#/user/search">
+                    <i class="menu-icon fa fa-caret-right"></i>
+                    <span translate class="menu-text">User.Search</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="/#/user/create">
+                    <i class="menu-icon fa fa-caret-right"></i>
+                    <span translate class="menu-text">User.Create</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li class="open">
+        <a href="#">
+            <i class="menu-icon fa fa-group"></i>
+            <span translate class="menu-text">Group.Management</span>
+            <b class="arrow fa fa-angle-down"></b>
+        </a>
+        <b class="arrow"></b>
+
+        <ul class="submenu">
+            <li>
+                <a href="/#/group/search">
+                    <i class="menu-icon fa fa-caret-right"></i>
+                    <span translate class="menu-text">Group.Search</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="/#/group/create">
+                    <i class="menu-icon fa fa-caret-right"></i>
+                    <span translate class="menu-text">Group.Create</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <!-- second level item -->
+    <li>
+        <a href="#">
+            <i class="menu-icon fa fa-caret-right"></i>
+            level 2 item text
+            <b class="arrow fa fa-angle-down"></b>
+        </a>
+    </li>
+</ul>
+<!-- /.sidebar -->
+

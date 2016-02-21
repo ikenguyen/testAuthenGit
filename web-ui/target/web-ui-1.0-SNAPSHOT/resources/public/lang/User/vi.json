@@ -1,0 +1,20 @@
+{
+  "User" : "Người dùng",
+  "User" : {
+    "" : "Nguoi dung",
+    "Management" : "Quản trị người dùng",
+    "Search" : "Danh sách người dùng",
+    "Create" : "Tạo mới người dùng",
+    "Info"   : "Thông tin chung",
+    "Name"   : "Tên đăng nhập",
+    "FullName": "Tên đầy đủ",
+    "Password": "Mật khẩu",
+    "PasswordRetype": "Nhập lại mật khẩu",
+    "Errors" : {
+      "RequiredUserName" : "Tên đăng nhập bắt buộc nhập",
+      "RequiredFullName" : "Tên đầy đủ bắt buộc nhập",
+      "RequiredPassword" : "Mật khẩu bắt buộc nhập",
+      "PasswordComplexity": "Mật khẩu phải dài ít nhất 6 kí tự, chứa 1 chữ số và 1 kí tự hoa"
+    }
+  }
+}

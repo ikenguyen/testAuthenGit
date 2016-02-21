@@ -1,0 +1,15 @@
+{
+  "Customer" : "",
+  "Customer" : {
+    "Management" : "Quản trị khách hàng",
+    "Search" : "Danh sách khách hàng",
+    "Create" : "Tạo mới khách hàng",
+    "Code"   : "Mã khách hàng",
+    "Info"   : "Thông tin chung",
+    "Name"   : "Tên khách hàng",
+    "Party"  : "Người liên hệ",
+    "Errors" : {
+      "RequiredName" : "Tên bắt buộc nhập"
+    }
+  }
+}

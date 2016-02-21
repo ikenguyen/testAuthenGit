@@ -1,0 +1,26 @@
+<tr st-select-row="row" ng-repeat="row in model.itemList">
+    <td ng-show="!row.readOnly">
+        <ui-select ng-model="detailRoles.sltItem" on-select="ctrl.onSelect($item)">
+            <ui-select-match placeholder="Select or search a role in the list...">
+                <span ng-bind="$select.selected.name"></span>
+            </ui-select-match>
+            <ui-select-choices repeat="role in (ctrl.loadedRoles | filter: $select.search) track by role.name">
+                <div ng-bind-html="role.name | highlight: $select.search"></div>
+                <small ng-bind-html="role.desc | highlight: $select.search"></small>
+            </ui-select-choices>
+        </ui-select>
+    </td>
+    <td ng-show="row.readOnly">{{row.name}}</a></td>
+    <td>{{row.desc}}</td>
+    <td ng-show="!ctrl.isView()">
+        <div class="hidden-sm hidden-xs action-buttons center">
+            <button class="btn btn-xs btn-info" ng-click="ctrl.editDetail(row)">
+                <i class="ace-icon fa fa-pencil bigger-120"></i>
+            </button>
+
+            <button class="btn btn-xs btn-danger" ng-click="ctrl.removeDetail(row)">
+                <i class="ace-icon fa fa-trash-o bigger-120"></i>
+            </button>
+        </div>
+    </td>
+</tr>

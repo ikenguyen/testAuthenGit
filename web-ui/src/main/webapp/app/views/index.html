@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<title>Order Tracker</title>
+<!--<base href="/" />-->
+<link href="resources/public/css/angular-bootstrap.css" rel="stylesheet">
+<link href="resources/public/css/font-awesome.css" rel="stylesheet">
+<link href="resources/public/css/ace.css" rel="stylesheet">
+<link href="resources/public/css/ace-part2.css" rel="stylesheet">
+
+
+	<style type="text/css">
+	[ng\:cloak], [ng-cloak], .ng-cloak {
+		display: none !important;
+	}
+
+	.form-group.required .control-label:after {
+		content:"*";
+		color:red;
+	}
+
+		/* hotfix for angular-ui-select, will be removed later. */
+	.ui-select-bootstrap .btn{
+		color: #80909a !important;
+		text-shadow: none !important;
+		background-color: #FFF !important;
+		width : 100%;
+	}
+
+	.ui-select-bootstrap .ui-select-search{
+		width : 100%;
+	}
+</style>
+</head>
+
+<body ng-cloak class="ng-cloak " ng-class="layout.theme" ng-controller="orderTrackerController">
+
+	<div ng-include="layout.header" class="navbar"></div>
+	<div class="main-container" id="main-container">
+		<div ng-include src="layout.sidebar" class="sidebar responsive"></div>
+		<div ng-view class="main-content"></div>
+	</div>
+	<div ng-include src="layout.footer" class="footer"></div>
+
+	<script src="resources/public/js/angular-bootstrap.js" type="text/javascript"></script>
+	<script src="resources/public/js/angular-translate.min.js" type="text/javascript"></script>
+	<script src="resources/public/js/angular-translate-loader-partial.min.js" type="text/javascript"></script>
+	<script src="resources/public/js/smart-table.min.js" type="text/javascript"></script>
+
+	<!-- Load custom scripts via RequireJS -->
+	<script src="resources/public/js/require.js" data-main="resources/public/js/main"></script>
+
+
+</body>
+</html>

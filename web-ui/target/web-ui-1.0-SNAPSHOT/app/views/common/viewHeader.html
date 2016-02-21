@@ -1,0 +1,9 @@
+<div class="page-header">
+    <h1>{{title | translate}}</h1>
+</div>
+
+<div ng-if="message.contents.length"  class="alert" ng-class="message.type">
+    <ul>
+        <li ng-repeat="content in message.contents">{{content | translate}}</li>
+    </ul>
+</div>

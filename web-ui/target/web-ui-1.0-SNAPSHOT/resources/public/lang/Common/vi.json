@@ -1,0 +1,28 @@
+{
+  "Button" : {
+    "Save"  : "Lưu",
+    "Update": "Cập nhật",
+    "Ok"    : "Đồng ý",
+    "Cancel": "Huỷ bỏ",
+    "Add"   : "Thêm",
+    "Delete": "Xoá"
+  },
+  "Modal"   :{
+    "Title" : "Nhắc lại",
+    "Content": "Bạn có chắc ? "
+  },
+  "Menu"    :{
+    "UserManagement" : "Quản lý người dùng",
+    "UserCreate"     : "Tạo mới người dùng",
+    "UserSearch"     : "Tìm kiếm người dùng",
+    "GroupManagement": "Quản lý nhóm",
+    "GroupCreate"    : "Tạo mới nhóm",
+    "GroupSearch"    : "Tìm kiếm nhóm"
+  },
+  "Error" : {
+    "System" : "Có lỗi xảy ra. "
+  },
+  "Name" : "Tên",
+  "Desc" : "Mô tả"
+
+}

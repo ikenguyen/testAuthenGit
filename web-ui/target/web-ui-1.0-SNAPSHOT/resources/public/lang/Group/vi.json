@@ -1,0 +1,8 @@
+{
+  "Group" : "Nhóm người dùng",
+  "Group" : {
+    "Management" : "Quản trị nhóm",
+    "Search" : "Danh sách nhóm",
+    "Create" : "Tạo mới nhóm"
+  }
+}

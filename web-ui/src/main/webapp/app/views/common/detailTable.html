@@ -1,0 +1,30 @@
+<div class="table-header">
+    <i class="ace-icon fa fa-table"></i>
+    {{ model.title | translate}}
+</div>
+<div>
+    <div class="dataTables_wrapper form-inline no-footer">
+        <div class="row" ng-show="!ctrl.isView()">
+            <div class="col-xs-12 col-md-2">
+                <button class="btn btn-sm btn-info" type="button" ng-click="ctrl.addDetail()">
+                    <i class="ace-icon fa fa-plus"></i>
+                    {{ 'Button.Add' | translate}}
+                </button>
+            </div>
+
+            <div class="col-xs-12 col-md-10">
+                <div ng-if="model.msg.contents.length"  class="alert" ng-class="model.msg.type">
+                    <ul>
+                        <li ng-repeat="content in model.msg.contents">{{content | translate}}</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <table class="table table-bordered table-hover">
+            <thead class="thin-border-bottom" data-ng-include="model.headerTpl"/>
+            <tbody data-ng-include="model.bodyTpl" />
+        </table>
+    </div>
+</div>

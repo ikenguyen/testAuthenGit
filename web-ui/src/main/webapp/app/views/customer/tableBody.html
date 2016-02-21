@@ -1,0 +1,55 @@
+<tr ng-repeat="row in model.itemList" ng-form="detailForm">
+    <td>{{row.index}}</td>
+    <td>
+        <input type="text"  required class="col-xs-12" name="partyName"
+               ng-readonly="row.readOnly" ng-model="row.partyName"
+               placeholder="{{ 'Customer.Party' | translate }}">
+    </td>
+    <td>
+        <input type="text"  required class="col-xs-12"
+               ng-readonly="row.readOnly" ng-model="row.address"
+               placeholder="{{ 'Address' | translate }}">
+    </td>
+    <td>
+        <ui-select ng-model="row.city" ng-disabled="row.readOnly" class="col-xs-12">
+            <ui-select-match placeholder="{{ 'City' | translate }}">
+                <span ng-bind="$select.selected"></span>
+            </ui-select-match>
+            <ui-select-choices repeat="city in (cities | filter: $select.search)">
+                <div ng-bind-html="city"></div>
+            </ui-select-choices>
+        </ui-select>
+    </td>
+    <td>
+        <input type="text"  required class="col-xs-12"
+               ng-readonly="row.readOnly" ng-model="row.phone"
+               placeholder="{{ 'Phone' | translate }}">
+    </td>
+    <td>
+        <input type="text"  required class="col-xs-12"
+               ng-readonly="row.readOnly" ng-model="row.email"
+               placeholder="Email">
+    </td>
+    <td>
+        <input type="radio" ng-disabled="ctrl.isView()" name="defaultAddr"
+               ng-model="model.defaultIndex" ng-value="row.index" ng-change="ctrl.defaultAddrUpdated(row.index)">
+    </td>
+    <td>
+        <input type="checkbox" ng-disabled="row.readOnly" ng-model="row.status"
+               ng-true-value="'active'" ng-false-value="'disabled'"/>
+    </td>
+    <td ng-show="!ctrl.isView()">
+        <div style="min-width: 80px;" class="hidden-sm hidden-xs action-buttons center">
+            <button class="btn btn-xs btn-success" ng-click="ctrl.onSelect(row)" ng-show="!row.readOnly">
+                <i class="ace-icon fa fa-check bigger-120"></i>
+            </button>
+            <button class="btn btn-xs btn-info" ng-click="ctrl.editDetail(row)" ng-show="row.readOnly">
+                <i class="ace-icon fa fa-pencil bigger-120"></i>
+            </button>
+
+            <button class="btn btn-xs btn-danger" ng-click="ctrl.removeDetail(row)">
+                <i class="ace-icon fa fa-trash-o bigger-120"></i>
+            </button>
+        </div>
+    </td>
+</tr>

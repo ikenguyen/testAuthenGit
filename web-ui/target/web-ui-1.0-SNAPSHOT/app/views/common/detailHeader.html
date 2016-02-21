@@ -1,0 +1,6 @@
+
+<div ng-if="detailMsg.contents.length"  class="alert" ng-class="detailMsg.type">
+    <ul>
+        <li ng-repeat="content in detailMsg.contents">{{content | translate}}</li>
+    </ul>
+</div>

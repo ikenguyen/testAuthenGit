@@ -1,0 +1,149 @@
+[{
+  "name" :"Login",
+  "url"  : "/login"
+},{
+  "name" :"Home",
+  "url"  : "/home"
+},{
+  "name" : "User",
+  "url"  : "/user",
+  "path" : "user/",
+  "alias": "usrCtrl",
+  "menu" : {
+    "name" : "Menu.UserManagement",
+    "path" : "/user",
+    "icon" : "fa-user"
+  },
+  "subs" : [
+    {
+      "name" :"Search",
+      "url"  :"/search",
+      "alias":"searchCtrl",
+      "menu" : {
+        "name" : "Menu.UserSearch",
+        "path" : "/user/search",
+        "icon" : "fa-user"
+      }
+    },{
+      "name" :"^",
+      "url"  :"/update/:id"
+    },{
+      "name": "^",
+      "url": "/create",
+      "menu" : {
+        "name" : "Menu.UserCreate",
+        "path" : "/user/create",
+        "icon" : "fa-user"
+      }
+    },{
+      "name": "^",
+      "url": "/:id"
+    }
+  ]
+},{
+  "name" : "Group",
+  "url"  : "/group",
+  "path" : "group/",
+  "alias": "grpCtrl",
+  "menu" : {
+    "name" : "Menu.GroupManagement",
+    "path" : "/group",
+    "icon" : "fa-users"
+  },
+  "subs" : [
+    {
+      "name" :"Search",
+      "url"  :"/search",
+      "alias":"searchCtrl",
+      "menu" : {
+        "name" : "Menu.GroupSearch",
+        "path" : "/group/search",
+        "icon" : "fa-users"
+      }
+    },{
+      "name" :"^",
+      "url"  :"/update/:id"
+    },{
+      "name": "^",
+      "url": "/create",
+      "menu" : {
+        "name" : "Menu.GroupCreate",
+        "path" : "/group/create",
+        "icon" : "fa-users"
+      }
+    },{
+      "name": "^",
+      "url": "/:id"
+    }
+  ]
+},{
+  "name" : "Customer",
+  "url"  : "/customer",
+  "path" : "customer/",
+  "alias": "cusCtrl",
+  "menu" : {
+    "name" : "Menu.CustomerManagement",
+    "path" : "/customer",
+    "icon" : "fa-android"
+  },
+  "subs" : [
+    {
+      "name" :"Search",
+      "url"  :"/search",
+      "alias":"searchCtrl",
+      "menu" : {
+        "name" : "Menu.CustomerSearch",
+        "path" : "/customer/search",
+        "icon" : "fa-android"
+      }
+    },{
+      "name" :"^",
+      "url"  :"/update/:id"
+    },{
+      "name": "^",
+      "url": "/create",
+      "menu" : {
+        "name" : "Menu.CustomerCreate",
+        "path" : "/customer/create",
+        "icon" : "fa-android"
+      }
+    },{
+      "name": "^",
+      "url": "/:id"
+    }
+  ]
+},{
+  "name" : "Inventory",
+  "url"  : "/inventory",
+  "path" : "inventory/",
+  "alias": "invCtrl",
+  "menu" : {
+    "name" : "Inventory",
+    "path" : "/inventory",
+    "icon" : "fa-archive"
+  },
+  "subs" : [
+    {
+      "name" :"ItemSearch",
+      "url"  :"/search",
+      "alias":"searchCtrl",
+      "menu" : {
+        "name" : "Inventory.Search",
+        "path" : "/inventory/search",
+        "icon" : "fa-search"
+      }
+    },{
+      "name" :"^",
+      "url"  :"/update/:id"
+    },{
+      "name": "Item",
+      "url": "/create",
+      "menu" : {
+        "name" : "Inventory.Create",
+        "path" : "/inventory/create",
+        "icon" : "fa-archive"
+      }
+    },{
+      "name": "^",
+      "url": "/:id"
+    }]}]

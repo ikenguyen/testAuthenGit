@@ -1,0 +1,42 @@
+[{
+  "name": "root",
+  "parent": "",
+  "abstract": true,
+  "views": [{
+    "name": "header@",
+    "templateUrl": "app/views/header.html"
+  }, {
+    "name": "footer@",
+    "templateUrl": "app/views/footer.html"
+  }]
+}, {
+  "name": "home",
+  "url": "/home",
+  "abstract": true,
+  "parent": "root",
+  "views": [{
+    "name": "main@",
+    "templateUrl": "app/views/home.html"
+  }, {
+    "name": "sidebar@",
+    "templateUrl": "app/views/sidebar.html"
+  }]
+}, {
+  "name": "login",
+  "url": "/login",
+  "abstract": false,
+  "parent": "root",
+  "views": [{
+    "name": "main@",
+    "resolve": "Login"
+  }]
+},{
+  "name": "home.detail",
+  "url": "/detail",
+  "abstract": false,
+  "parent": "home",
+  "views": [{
+    "name": "main@detail",
+    "resolve": "About"
+  }]
+}]

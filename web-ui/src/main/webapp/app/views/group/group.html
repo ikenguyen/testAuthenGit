@@ -1,0 +1,78 @@
+<div class="page-content">
+    <ng-include src="'app/views/common/viewHeader.html'"></ng-include>
+
+
+    <div class="panel panel-primary">
+        <!-- Default panel contents -->
+        <div translate class="panel-heading">Group.Info</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form class="form-horizontal" name="groupForm" ng-submit="grpCtrl.doOk()" novalidate>
+                        <!-- #section:elements.form -->
+                        <div class="form-group required">
+                            <label class="col-sm-3 control-label no-padding-right">
+                                 {{ 'Group.Name' | translate }}
+                            </label>
+
+                            <div class="col-sm-9">
+                                <input type="text"  name="name"  required
+                                       ng-readonly="grpCtrl.isView()" ng-model="group.name"
+                                       placeholder="{{ 'Group.Name' | translate }}" class="col-xs-10 col-sm-5">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right">
+                                {{ 'Group.Desc' | translate }} </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="fullName"
+                                       ng-model="group.desc"  ng-readonly="grpCtrl.isView()"
+                                       placeholder=" {{ 'Group.desc' | translate }}" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+                    <!-- PAGE CONTENT ENDS -->
+                </div><!-- /.col -->
+            </div>
+        </div>
+
+    </div>
+
+    <div class="space-4"/>
+
+    <div class="row">
+        <ng-include src="'app/views/common/detailTable.html'" class="col-xs-12"
+                    ng-init="ctrl=grpCtrl;model=detailRoles"></ng-include>
+    </div>
+
+    <div class="space-12"/>
+
+    <div class="button-group center" ng-show="!grpCtrl.isView()">
+        <button class="btn btn-info" type="button" ng-click="grpCtrl.doOk()">
+            <i class="ace-icon fa fa-check"></i>
+            {{ 'Button.Ok' | translate}}
+        </button>
+
+        <button class="btn btn-danger" type="button" ng-click="grpCtrl.doCancel()">
+            <i class="ace-icon fa fa-close"></i>
+            {{ 'Button.Cancel' | translate}}
+        </button>
+    </div>
+
+    <div class="button-group center" ng-show="grpCtrl.isView()">
+        <button class="btn btn-info" type="button" data-ng-click="grpCtrl.go('/group/update/' + group.id)">
+                <i class="ace-icon fa fa-edit"></i>
+                {{ 'Button.Update' | translate}}
+        </button>
+        <button class="btn btn-danger" type="button" ng-click="grpCtrl.doDelete(group)">
+            <i class="ace-icon fa fa-close"></i>
+            {{ 'Button.Delete' | translate}}
+        </button>
+    </div>
+
+</div>
+<!-- /.user content -->
+

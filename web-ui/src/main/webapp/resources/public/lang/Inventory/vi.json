@@ -1,0 +1,8 @@
+{
+  "Inventory" : "Quản lý kho",
+  "Inventory" : {
+    "Item" : "Hàng hóa",
+    "ItemSearch" : "Danh sách hàng hóa",
+    "ItemCreate" : "Tạo mới hàng hóa"
+  }
+}
