@@ -11,7 +11,7 @@
 
     <artifactId>web-ui</artifactId>
     <packaging>war</packaging>
-
+<packaging>war</packaging>
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
